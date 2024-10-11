@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>info706</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <!-- Version de Java minimum -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
+
+    <dependencies>
+
+      <!-- Jakarta EE API -->
+      <dependency>
+          <groupId>jakarta.platform</groupId>
+          <artifactId>jakarta.jakartaee-api</artifactId>
+          <version>9.0.0</version>
+          <scope>provided</scope>
+      </dependency>
+
+      <!-- Hibernate (pour la gestion JPA) -->
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-core</artifactId>
+          <version>5.4.31.Final</version>
+      </dependency>
+
+      <!-- JDBC Driver pour ta base de données (exemple pour MySQL) -->
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.23</version>
+      </dependency>
+  </dependencies>
+
+
+  <build>
+      <finalName>info706</finalName>
+
+      <plugins>
+          <!-- Maven Plugin pour assembler un WAR -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>3.3.1</version>
+              <configuration>
+                  <failOnMissingWebXml>false</failOnMissingWebXml>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
+</project>

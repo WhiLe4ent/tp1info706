@@ -1,0 +1,5 @@
+com/example/colis/Position.class
+com/example/servlet/EnregistrerColisServlet.class
+com/example/servlet/MiseAJourPositionServlet.class
+com/example/service/ColisService.class
+com/example/colis/Colis.class
